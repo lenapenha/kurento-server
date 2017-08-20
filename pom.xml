@@ -3,12 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.kurento.tutorial</groupId>
-		<artifactId>kurento-tutorial</artifactId>
+		<groupId>org.kurento</groupId>
+		<artifactId>kurento-parent-pom</artifactId>
 		<version>6.6.2</version>
 	</parent>
 
+	<groupId>org.kurento.tutorial.one2onecall</groupId>
 	<artifactId>kurento-one2one-call</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Kurento Java Tutorial - One2One Call</name>
@@ -49,9 +51,16 @@
 		<!-- Main class -->
 		<start-class>org.kurento.tutorial.one2onecall.One2OneCallApp</start-class>
 
+		<version.kurento-datachannelexample>6.6.0</version.kurento-datachannelexample>
+
 	</properties>
 
 	<dependencies>
+			<dependency>
+				<groupId>org.kurento.module</groupId>
+				<artifactId>datachannelexample</artifactId>
+				<version>${version.kurento-datachannelexample}</version>
+			</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
